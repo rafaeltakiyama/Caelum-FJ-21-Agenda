@@ -13,7 +13,7 @@
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 
-	<!-- definição da servlet  -->
+	<!-- definição da servlet -->
 	<servlet>
 		<servlet-name>primeiraServlet</servlet-name>
 		<servlet-class>br.com.caelum.servlet.OiMundo</servlet-class>
@@ -24,5 +24,15 @@
 		<servlet-name>primeiraServlet</servlet-name>
 		<url-pattern>/oi</url-pattern>
 	</servlet-mapping>
-	
+
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/erro.html</location>
+	</error-page>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/erro404.html</location>
+	</error-page>
+
 </web-app>
